@@ -34,9 +34,9 @@ def calculate_scores(answers,predictions):
     tn, fp, fn, tp = confusion_matrix(y_trues, y_preds).ravel()
     scores['tn']=tn
     scores['fp']=fp
-    scores=['fn']=fn
-    scores=['tp']=tp  
-    scores=['Accuracy']=accuracy_score(y_trues, y_preds)  
+    scores['fn']=fn
+    scores['tp']=tp  
+    scores['Accuracy']=accuracy_score(y_trues, y_preds)  
     scores['Recall']=recall_score(y_trues, y_preds)
     scores['Prediction']=precision_score(y_trues, y_preds)
     scores['F1']=f1_score(y_trues, y_preds)
