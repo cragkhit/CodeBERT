@@ -2,7 +2,7 @@
 # Licensed under the MIT license.
 import logging
 import sys
-from sklearn.metrics import recall_score,precision_score,f1_score
+from sklearn.metrics import recall_score,precision_score,f1_score, confusion_matrix
 
 def read_answers(filename):
     answers={}
@@ -31,6 +31,12 @@ def calculate_scores(answers,predictions):
         y_trues.append(answers[key])
         y_preds.append(predictions[key])
     scores={}
+    tn, fp, fn, tp = confusion_matrix(y_trues, y_preds).ravel()
+    scores['tn']=tn
+    scores['fp']=fp
+    scores=['fn']=fn
+    scores=['tp']=tp  
+    scores=['Accuracy']=accuracy_score(y_trues, y_preds)  
     scores['Recall']=recall_score(y_trues, y_preds)
     scores['Prediction']=precision_score(y_trues, y_preds)
     scores['F1']=f1_score(y_trues, y_preds)
