@@ -7,15 +7,19 @@ Language.build_library(
   # Store the library in the `build` directory
   'my-languages.so',
 
-  # Include one or more languages
+  # # Include one or more languages
+  # [
+  #   'tree-sitter-go',
+  #   'tree-sitter-javascript',
+  #   'tree-sitter-python',
+  #   'tree-sitter-php',
+  #   'tree-sitter-java',
+  #   'tree-sitter-ruby',
+  #   'tree-sitter-c-sharp',
+  # ]
+    # Include one or more languages
   [
-    'tree-sitter-go',
-    'tree-sitter-javascript',
-    'tree-sitter-python',
-    'tree-sitter-php',
-    'tree-sitter-java',
-    'tree-sitter-ruby',
-    'tree-sitter-c-sharp',
+    'tree-sitter-java'
   ]
 )
 
