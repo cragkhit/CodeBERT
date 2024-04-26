@@ -10,7 +10,7 @@ def read_files_from_folder(folder_path):
     count = 1
     all_code_files = []
     for root, dirs, files in os.walk(folder_path):
-        print(root)
+        # print(root)
         for file in files:
             file_path = os.path.join(root, file)
             # print(file_path)
@@ -18,7 +18,7 @@ def read_files_from_folder(folder_path):
                 print(file_path)
                 all_code_files.append([count, read_file_content(file_path)])
                 count+=1
-    print(count)
+    print(count-1)
     return all_code_files
 
 def write_to_jsonl(file_path, data):
@@ -32,9 +32,9 @@ def write_to_jsonl(file_path, data):
 
 def write_ocd_groundtruht(file_path):
     with open(file_path, 'w') as f:
-        for i in range(1, 101):
-            for j in range(1, 101):
-                if (i<=10 and j<=10) or (i>10 and i<=20 and j>10 and j<=20) or (i>20 and i<=30 and j>20 and j<=30) or (i>30 and i<=40 and j>30 and j<=40) or (i>40 and i<=50 and j>40 and j<=50) or (i>50 and i<=60 and j>50 and j<=60) or (i>60 and i<=70 and j>60 and j<=70) or (i>70 and i<=80 and j>70 and j<=80) or (i>80 and i<=90 and j>80 and j<=90) or (i>90 and i<=100 and j>90 and j<=100):
+        for i in range(1, 9):
+            for j in range(1, 9):
+                if (i<=2 and j<=2) or (i>2 and i<=4 and j>2 and j<=4) or (i>4 and i<=6 and j>4 and j<=6) or (i>6 and i<=8 and j>6 and j<=8):
                     f.write(str(i) + '\t' + str(j) + '\t1\n')
                 else:
                     f.write(str(i) + '\t' + str(j) + '\t0\n')
