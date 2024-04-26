@@ -135,3 +135,5 @@ GraphCodeBERT/clonedetection/dataset/ocd8x8_test.txt
 GraphCodeBERT/clonedetection/dataset/ocd8x8.jsonl
 GraphCodeBERT/clonedetection/dataset/sesame.jsonl
 GraphCodeBERT/clonedetection/dataset/sesame.txt
+GraphCodeBERT/clonedetection/dataset/cloneoracle.jsonl
+GraphCodeBERT/clonedetection/dataset/cloneoracle.txt
