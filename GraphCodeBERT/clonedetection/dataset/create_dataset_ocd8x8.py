@@ -24,7 +24,7 @@ def read_files_from_folder(folder_path):
 def write_to_jsonl(file_path, data):
     with open(file_path, 'w') as f:
         for item in data:
-            f.write(json.dumps({'func': item[1], 'idx': item[0]}))
+            f.write(json.dumps({'func': item[1], 'idx': str(item[0])}))
             f.write('\n')
     # with open(file_path) as f:
     #     for line in f:
