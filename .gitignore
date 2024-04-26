@@ -127,3 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+GraphCodeBERT/clonedetection/dataset/data.jsonl
+GraphCodeBERT/clonedetection/dataset/test.txt
+GraphCodeBERT/clonedetection/dataset/train.txt
+GraphCodeBERT/clonedetection/dataset/valid.txt
