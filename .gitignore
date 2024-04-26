@@ -131,3 +131,5 @@ GraphCodeBERT/clonedetection/dataset/data.jsonl
 GraphCodeBERT/clonedetection/dataset/test.txt
 GraphCodeBERT/clonedetection/dataset/train.txt
 GraphCodeBERT/clonedetection/dataset/valid.txt
+GraphCodeBERT/clonedetection/dataset/ocd8x8_test.txt
+GraphCodeBERT/clonedetection/dataset/ocd8x8.jsonl
