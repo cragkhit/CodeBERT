@@ -54,8 +54,8 @@ def write_bcbharmful_groundtruth(input_file_path, output_file_path):
         
 
 # Main execution
-project_path = '/Users/chaiyong/Downloads/do_not_delete/BCBStudy/SimilBench/'
-folder_path = 'data/bcbharmful'
+project_path = '/Users/chaiyong/Downloads/do_not_delete/SimilBench/'
+folder_path = 'data/bcbharmfulF'
 code_files_list = read_files_from_folder(project_path + '/' + folder_path)
 write_to_jsonl(project_path + '/bcbharmful.jsonl', code_files_list)
 write_bcbharmful_groundtruth(project_path + '/truth/bcbharmful.csv', project_path + 'bcbharmful.txt')

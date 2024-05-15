@@ -40,8 +40,8 @@ def write_ocd_groundtruht(input, output):
             
         
 # Main execution
-project_path = '/Users/chaiyong/Downloads/do_not_delete/CodeBERTChaiyong/GraphCodeBERT/clonedetection/dataset/'
-folder_path = 'cloneoracle/'
+project_path = '/Users/chaiyong/Downloads/do_not_delete/SimilBench'
+folder_path = 'data/cloneoracle/'
 code_files_list = read_files_from_folder(project_path + '/' + folder_path)
 write_to_jsonl(project_path + '/cloneoracle.jsonl', code_files_list)
-write_ocd_groundtruht(project_path + '/' + folder_path + '/cloneoracle.csv', project_path + '/cloneoracle.txt')
+write_ocd_groundtruht(project_path + '/truth/cloneoracle.csv', project_path + '/cloneoracle.txt')
