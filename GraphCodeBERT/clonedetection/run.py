@@ -54,7 +54,6 @@ dfg_function={
     'java':DFG_java,
     'ruby':DFG_ruby,
     'go':DFG_go,
-    'php':DFG_php,
     'javascript':DFG_javascript
 }
 

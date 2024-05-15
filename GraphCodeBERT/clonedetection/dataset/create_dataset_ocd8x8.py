@@ -41,8 +41,8 @@ def write_ocd_groundtruht(file_path):
         
 
 # Main execution
-project_path = '/Users/chaiyong/Downloads/do_not_delete/CodeBERTChaiyong/GraphCodeBERT/clonedetection/dataset'
-folder_path = '/ocd8x8/'
+project_path = '/Users/chaiyong/Downloads/do_not_delete/SimilBench/data/'
+folder_path = '/ocd8x8F/'
 code_files_list = read_files_from_folder(project_path + '/' + folder_path)
 write_to_jsonl(project_path + '/ocd8x8.jsonl', code_files_list)
 write_ocd_groundtruht(project_path + '/ocd8x8_test.txt')
