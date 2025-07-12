@@ -507,11 +507,11 @@ def test(args, model, tokenizer, best_threshold=0):
     logits=np.concatenate(logits,0)
     y_preds=logits[:,1]>best_threshold
     with open(os.path.join(args.output_dir,"predictions.txt"),'w') as f:
-        for example,pred in zip(eval_dataset.examples,y_preds):
+        for example,pred,logit in zip(eval_dataset.examples,y_preds,logits[:,1]):
             if pred:
-                f.write(example.url1+'\t'+example.url2+'\t'+'1'+'\t'+str(logits[:,1])+'\n')
+                f.write(example.url1+'\t'+example.url2+'\t'+'1'+'\t'+str(logit)+'\n')
             else:
-                f.write(example.url1+'\t'+example.url2+'\t'+'0'+'\t'+str(logits[:,1])+'\n')
+                f.write(example.url1+'\t'+example.url2+'\t'+'0'+'\t'+str(logit)+'\n')
                                                 
 def main():
     parser = argparse.ArgumentParser()
