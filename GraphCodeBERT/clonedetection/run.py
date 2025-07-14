@@ -493,6 +493,7 @@ def test(args, model, tokenizer, best_threshold=0):
     logits=[]  
     y_trues=[]
     for batch in eval_dataloader:
+        logger.info("  Progress = %d/%d", nb_eval_steps, len(eval_dataset))
         (inputs_ids_1,position_idx_1,attn_mask_1,
         inputs_ids_2,position_idx_2,attn_mask_2,
         labels)=[x.to(args.device)  for x in batch]
